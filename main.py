@@ -15,7 +15,7 @@ def traducir_texto(texto):
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "Eres un traductor experto. Traduce el siguiente texto completo del español al inglés, manteniendo el contexto y la estructura del texto original. Asegurate de traducir los nombres de los personajes de su version en espanol a la version en ingles:"},
+            {"role": "system", "content": "Eres un traductor experto. Traduce el siguiente texto completo del español al inglés, manteniendo el contexto y la estructura del texto original. Asegurate de traducir los nombres de los personajes de su version en espanol a la version en ingles. Por ejemplo: Tito Macio es Titus Maccius, y la ciudad de Qart Hadasht tienes que llamarla por el mismo nombre, Qart Hadasht. No llamarla Carthage.:"},
             {"role": "user", "content": texto}
         ]
     )
